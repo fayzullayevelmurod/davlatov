@@ -76,6 +76,8 @@ body {
   font-family: $font-Onest;
   font-style: normal;
   font-display: swap;
+  background: #040311;
+  color: #FFFFFF;
 }
 
 input, textarea {
@@ -112,9 +114,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: calc(1920rem);
+  max-width: 1690rem;
+  width: calc(100% - 40rem);
   margin: 0 auto;
-  padding: 0 120rem;
 
   @include media('lg') {
     padding: 0 20rem;
@@ -124,4 +126,84 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-top {
   margin-top: 160px;
+}
+
+.btn {
+  &-white {
+    width: auto;
+    height: 72rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 90rem 0 rgba(14, 64, 227, 0.53);
+    background: #fff;
+    padding: 0 46.5rem;
+    border-radius: 72rem;
+    font-family: $font-Manrope;
+    font-weight: 700;
+    font-size: 24rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #0c31ab;
+  }
+
+  &-blue {
+    background: #4060ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80rem;
+    width: auto;
+    border-radius: 80rem;
+    font-family: $font-Manrope;
+    font-weight: 700;
+    font-size: 26rem;
+    line-height: 77%;
+    color: #fff;
+    padding: 0 84rem;
+  }
+}
+
+.form {
+  &-inp {
+    background: rgba(24, 23, 28, 0.64);
+    position: relative;
+    z-index: 1;
+    border-radius: 80rem;
+    overflow: hidden;
+
+    &::after {
+      border-radius: 64rem;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border: 1rem solid transparent;
+      background: linear-gradient(170deg, #FFFFFF, rgba(119, 119, 119, 0.2)) border-box;
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    input {
+      width: 100%;
+      height: 80rem;
+      font-weight: 200;
+      font-size: 20rem;
+      color: #fff;
+      padding: 0 18rem;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.sec-title {
+  font-family: $font-Manrope;
+  font-weight: 700;
+  font-size: 67rem;
+  color: #fff;
 }

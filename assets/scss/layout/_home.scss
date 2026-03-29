@@ -1,0 +1,59 @@
+.home {
+    position: relative;
+    z-index: 1;
+    margin-top: 19rem;
+
+    &-bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 914rem;
+        background: #02003F;
+
+        .bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    &-card {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        width: 1097rem;
+    }
+
+    &-container {
+        padding-top: 127rem;
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 72rem;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #fdfdfd;
+        max-width: 965rem;
+        margin-bottom: 36rem;
+    }
+
+    .description {
+        font-family: $font-Inter;
+        font-weight: 300;
+        font-size: 36rem;
+        letter-spacing: -0.06em;
+        color: #fff;
+        max-width: 792rem;
+        margin-bottom: 60rem;
+    }
+
+    .btn-white {
+        margin-bottom: 70.5rem;
+    }
+}
