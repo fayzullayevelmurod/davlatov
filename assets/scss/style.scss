@@ -1,0 +1,10 @@
+@import
+    './vendors/normalize',
+    './abstracts/fonts',
+    './abstracts/variables',
+    './abstracts/media',
+    './base/globals';
+
+@import
+    './layout/header',
+    './layout/footer';
