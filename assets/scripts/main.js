@@ -24,11 +24,17 @@ let swiper = new Swiper(".treatmentsSwiper", {
 
 const header = document.querySelector('.header');
 const burger = document.querySelector('.header_burger');
+const body = document.querySelector('.body_wrap');
 
 if (burger && header) {
   burger.addEventListener('click', () => {
     const isOpen = header.classList.toggle('header--open');
     burger.setAttribute('aria-expanded', isOpen);
+
+    if (body) {
+      body.classList.toggle('body_wrap-active', isOpen);
+      body.style.overflow = isOpen ? 'hidden' : '';
+    }
   });
 
   document.addEventListener('click', (event) => {
@@ -37,6 +43,11 @@ if (burger && header) {
     if (!header.contains(event.target)) {
       header.classList.remove('header--open');
       burger.setAttribute('aria-expanded', 'false');
+
+      if (body) {
+        body.classList.remove('body_wrap-active');
+        body.style.overflow = '';
+      }
     }
   });
 }

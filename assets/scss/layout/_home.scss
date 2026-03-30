@@ -12,6 +12,14 @@
         height: 914rem;
         background: #02003F;
 
+        @include media('md') {
+            height: 800rem;
+        }
+
+        @include media('sm') {
+            height: 730rem;
+        }
+
         .bg-img {
             position: absolute;
             left: 0;
@@ -31,29 +39,64 @@
 
     &-container {
         padding-top: 127rem;
+
+        @include media('md') {
+            padding-top: 30rem;
+        }
     }
 
     h1 {
         font-weight: 600;
         font-size: 72rem;
+        line-height: 120%;
         letter-spacing: -0.03em;
         text-transform: uppercase;
         color: #fdfdfd;
         max-width: 965rem;
         margin-bottom: 36rem;
+
+        @include media('md') {
+            font-size: 40rem;
+            max-width: 100%;
+            margin-bottom: 24rem;
+        }
+
+        @include media('sm') {
+            font-size: 32rem;
+        }
     }
 
     .description {
         font-family: $font-Inter;
         font-weight: 300;
         font-size: 36rem;
+        line-height: 120%;
         letter-spacing: -0.06em;
-        color: #fff;
+        color: $color-white;
         max-width: 792rem;
         margin-bottom: 60rem;
+
+        @include media('md') {
+            font-size: 16rem;
+            max-width: 100%;
+            margin-bottom: 24rem;
+        }
     }
 
     .btn-white {
         margin-bottom: 70.5rem;
+
+        @include media('md') {
+            margin-bottom: 500rem;
+        }
+
+        @include media('sm') {
+            width: 100%;
+            margin-bottom: 80%;
+        }
+
+        @include media('xs') {
+            margin-bottom: 100%;
+        }
     }
 }

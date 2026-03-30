@@ -117,11 +117,6 @@ p, h1, h2, h3, h4, h5, h6 {
   max-width: 1690rem;
   width: calc(100% - 40rem);
   margin: 0 auto;
-
-  @include media('lg') {
-    padding: 0 20rem;
-  }
-
 }
 
 .section-top {
@@ -146,6 +141,12 @@ p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #0c31ab;
+
+    @include media('md') {
+      padding: 0 30rem;
+      height: 40rem;
+      font-size: 16rem;
+    }
   }
 
   &-blue {
@@ -163,6 +164,12 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 77%;
     color: #fff;
     padding: 0 84rem;
+
+    @include media('md') {
+      padding: 0 30rem;
+      height: 40rem;
+      font-size: 16rem;
+    }
   }
 }
 
@@ -174,6 +181,10 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 80rem;
     overflow: hidden;
 
+    @include media('md') {
+      border-radius: 54rem;
+    }
+
     &::after {
       border-radius: 64rem;
       content: "";
@@ -184,6 +195,10 @@ p, h1, h2, h3, h4, h5, h6 {
       background: linear-gradient(170deg, #FFFFFF, rgba(119, 119, 119, 0.2)) border-box;
       mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
       mask-composite: exclude;
+
+      @include media('md') {
+        border-radius: 32rem;
+      }
     }
 
     input {
@@ -197,6 +212,12 @@ p, h1, h2, h3, h4, h5, h6 {
       &::placeholder {
         color: #fff;
       }
+
+      @include media('md') {
+        height: 40rem;
+        font-size: 16rem;
+        padding: 0 20rem;
+      }
     }
   }
 }
@@ -205,5 +226,9 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: $font-Manrope;
   font-weight: 700;
   font-size: 67rem;
-  color: #fff;
+  color: $color-white;
+
+  @include media('md') {
+    font-size: 32rem;
+  }
 }

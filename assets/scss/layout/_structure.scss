@@ -1,0 +1,135 @@
+// structure
+.structure {
+  padding: 80rem 0;
+  background-image: url('../images/structure_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  @include media('md') {
+    padding: 40rem 0;
+  }
+
+  .sec-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 70rem;
+
+    @include media('md') {
+      margin-bottom: 32rem;
+    }
+  }
+
+  &_in {
+    position: relative;
+
+    @include media('md') {
+      padding-left: 32rem;
+      display: flex;
+      flex-direction: column;
+      gap: 28rem;
+    }
+
+    .numbers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 85%;
+      width: 5rem;
+      background: $color-blue;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include media('md') {
+        right: auto;
+        left: 0;
+      }
+
+      .number_block {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 45rem;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-blue;
+        width: 60rem;
+        height: 60rem;
+        border-radius: 50%;
+
+        @include media('md') {
+          font-weight: 500;
+          width: 36rem;
+          height: 36rem;
+          font-size: 27rem;
+        }
+      }
+    }
+  }
+
+  &_block {
+    width: 660rem;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 32rem;
+    padding: 22rem 16rem;
+    background: $color-white;
+
+    @include media('md') {
+      width: 100%;
+      padding: 12rem;
+      border-radius: 24rem;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+
+      @include media('md') {
+        margin-left: 0;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 24rem;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: $color-black;
+      margin-bottom: 16rem;
+
+      span {
+        color: $color-blue;
+        display: block;
+      }
+
+      @include media('md') {
+        font-weight: 500;
+        font-size: 18rem;
+        margin-bottom: 8rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        font-weight: 400;
+        font-size: 20rem;
+        line-height: 190%;
+        color: $color-black;
+
+        @include media('md') {
+          font-size: 14rem;
+        }
+      }
+    }
+  }
+}
+// structure

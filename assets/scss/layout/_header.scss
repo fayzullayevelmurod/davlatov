@@ -32,6 +32,12 @@
     cursor: pointer;
     position: relative;
     z-index: 11;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include media('md') {
+      display: flex;
+    }
 
     span,
     &::before,
@@ -68,9 +74,34 @@
     align-items: center;
     gap: 40rem;
 
+    @include media('md') {
+      position: fixed;
+      top: 60rem;
+      height: 100%;
+      right: 0;
+      left: 0;
+      background: rgba($color-blue, 0.95);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16rem;
+      padding: 20rem 16rem;
+      transform: translateX(-110%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      z-index: 10;
+    }
+
     li {
       opacity: 1;
       transform: translateX(0);
+
+      @include media('md') {
+        opacity: 0;
+        transform: translateX(-20px);
+        width: 100%;
+        transition: transform 0.35s ease, opacity 0.35s ease;
+      }
     }
 
     a {
@@ -82,6 +113,10 @@
       letter-spacing: -0.02em;
       color: $color-white;
       transition: color 0.3s ease;
+
+      @include media("md") {
+        font-size: 24rem;
+      }
 
       &::after {
         content: "";
@@ -105,42 +140,8 @@
     }
   }
 
-  // Mobile responsive menu
   @media (max-width: 850px) {
     padding: 16rem 0;
-
-    .header_burger {
-      display: block;
-    }
-
-    &_link {
-      position: fixed;
-      top: 65px;
-      right: 0;
-      left: 0;
-      background: rgba($color-blue, 0.95);
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10rem;
-      padding: 20rem 16rem;
-      transform: translateY(-110%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.35s ease, opacity 0.35s ease;
-      z-index: 10;
-
-      li {
-        opacity: 0;
-        transform: translateX(-20px);
-        width: 100%;
-        transition: transform 0.35s ease, opacity 0.35s ease;
-      }
-
-      a {
-        width: 100%;
-        padding: 8rem 0;
-      }
-    }
 
     &.header--open {
       .header_burger {
