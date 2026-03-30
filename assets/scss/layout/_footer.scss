@@ -1,3 +1,130 @@
 .footer {
-  
+  background: $color-blue;
+  padding: 40rem 0;
+
+  &_top {
+    margin-bottom: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('md') {
+      flex-direction: column;
+      gap: 24rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .logo {
+    font-family: $font-Manrope;
+    font-weight: 800;
+    font-size: 80rem;
+    letter-spacing: -0.02em;
+    color: $color-white;
+
+    @include media('md') {
+      font-size: 32rem;
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    gap: 40rem;
+
+    @include media('md') {
+      flex-direction: column;
+      gap: 16rem;
+    }
+
+    a {
+      position: relative;
+      font-family: $font-Inter;
+      font-weight: 600;
+      font-size: 20rem;
+      line-height: 175%;
+      letter-spacing: -0.02em;
+      color: $color-white;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $color-white;
+        transition: width 0.3s ease;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: $color-white;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80rem;
+      margin-bottom: 32rem;
+
+      @include media('md') {
+        flex-direction: column;
+        gap: 16rem;
+        margin-bottom: 24rem;
+      }
+
+      a {
+        position: relative;
+        font-family: $font-Inter;
+        font-weight: 600;
+        font-size: 20rem;
+        line-height: 175%;
+        letter-spacing: -0.02em;
+        color: $color-white;
+        transition: color 0.3s ease;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: $color-white;
+          transition: width 0.3s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+          color: $color-white;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 20rem;
+      text-align: center;
+      color: $color-white;
+      display: block;
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+  }
 }

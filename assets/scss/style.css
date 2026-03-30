@@ -1080,4 +1080,123 @@ p, h1, h2, h3, h4, h5, h6 {
   .contact-form li {
     font-size: 14rem;
   }
+}
+
+.footer {
+  background: #4060FF;
+  padding: 40rem 0;
+}
+.footer_top {
+  margin-bottom: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .footer_top {
+    flex-direction: column;
+    gap: 24rem;
+    margin-bottom: 0;
+  }
+}
+.footer .logo {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 80rem;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .footer .logo {
+    font-size: 32rem;
+  }
+}
+.footer_link {
+  display: flex;
+  align-items: center;
+  gap: 40rem;
+}
+@media (max-width: 850px) {
+  .footer_link {
+    flex-direction: column;
+    gap: 16rem;
+  }
+}
+.footer_link a {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20rem;
+  line-height: 175%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+.footer_link a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFFFFF;
+  transition: width 0.3s ease;
+}
+.footer_link a:hover, .footer_link a:focus-visible {
+  color: #FFFFFF;
+}
+.footer_link a:hover::after, .footer_link a:focus-visible::after {
+  width: 100%;
+}
+.footer_bottom ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80rem;
+  margin-bottom: 32rem;
+}
+@media (max-width: 850px) {
+  .footer_bottom ul {
+    flex-direction: column;
+    gap: 16rem;
+    margin-bottom: 24rem;
+  }
+}
+.footer_bottom ul a {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20rem;
+  line-height: 175%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+.footer_bottom ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFFFFF;
+  transition: width 0.3s ease;
+}
+.footer_bottom ul a:hover, .footer_bottom ul a:focus-visible {
+  color: #FFFFFF;
+}
+.footer_bottom ul a:hover::after, .footer_bottom ul a:focus-visible::after {
+  width: 100%;
+}
+.footer_bottom span {
+  font-weight: 300;
+  font-size: 20rem;
+  text-align: center;
+  color: #FFFFFF;
+  display: block;
+}
+@media (max-width: 850px) {
+  .footer_bottom span {
+    font-size: 16rem;
+  }
 }/*# sourceMappingURL=style.css.map */
