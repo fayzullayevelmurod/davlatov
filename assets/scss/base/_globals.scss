@@ -168,6 +168,45 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 77%;
     color: #fff;
     padding: 0 84rem;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 14rem 30rem rgba(64, 96, 255, 0.35);
+      transform: translateY(-2rem);
+    }
+
+    @include media('md') {
+      padding: 0 30rem;
+      height: 40rem;
+      font-size: 16rem;
+    }
+  }
+
+  &-white {
+    width: auto;
+    height: 72rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 90rem 0 rgba(14, 64, 227, 0.53);
+    background: #fff;
+    padding: 0 46.5rem;
+    border-radius: 72rem;
+    font-family: $font-Manrope;
+    font-weight: 700;
+    font-size: 24rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #0c31ab;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 14rem 30rem rgba(0, 0, 0, 0.16);
+      transform: translateY(-2rem);
+    }
 
     @include media('md') {
       padding: 0 30rem;

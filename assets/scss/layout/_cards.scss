@@ -72,6 +72,10 @@
         -webkit-mask-composite: xor;
         mask-composite: exclude;
         pointer-events: none;
+
+        @include media('md') {
+          border-radius: 16rem;
+        }
       }
 
       .card_img {
@@ -89,6 +93,10 @@
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           pointer-events: none;
+
+          @include media('md') {
+            border-radius: 16rem;
+          }
         }
       }
 
