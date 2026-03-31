@@ -4,6 +4,186 @@
 
   .sec-title {
     margin-bottom: 80rem;
+
+    @include media('md') {
+      margin-bottom: 32rem;
+    }
+  }
+
+  &_in {
+    display: flex;
+    gap: 67rem;
+
+    @include media('md') {
+      flex-direction: column;
+      gap: 40rem;
+    }
+  }
+
+  &_img {
+    display: flex;
+    flex-shrink: 0;
+    width: 424rem;
+    border-radius: 32rem;
+    border: 3rem solid #4060FF;
+    overflow: hidden;
+
+    @include media('md') {
+      margin: auto;
+      border-radius: 16rem;
+    }
+
+    @include media('xs') {
+      width: 100%;
+    }
+
+    img {
+      transform: translateY(-5rem);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_blocks {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40rem 20rem;
+    margin-bottom: 36rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 24rem;
+    }
+  }
+
+  &_block {
+    display: flex;
+    align-items: start;
+    gap: 24rem;
+
+    @include media('md') {
+      gap: 16rem;
+    }
+
+    img {
+      width: 78rem;
+      height: 78rem;
+      display: flex;
+      flex-shrink: 0;
+
+      @include media('md') {
+        width: 40rem;
+        height: 40rem;
+      }
+    }
+
+    h3 {
+      font-family: $font-Manrope;
+      font-weight: 700;
+      font-size: 32rem;
+      color: $color-white;
+      margin-bottom: 12rem;
+
+      @include media('md') {
+        font-size: 20rem;
+      }
+    }
+
+    p {
+      font-family: $font-Manrope;
+      font-weight: 400;
+      font-size: 24rem;
+      color: $color-white;
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  .contact-form {
+    border: 1px solid #FFFFFF42;
+    background: #1D1C29;
+    backdrop-filter: blur(26.200000762939453px);
+    border-radius: 32rem;
+    padding: 48rem 32rem;
+
+    @include media('md') {
+      padding: 16rem;
+      border-radius: 16rem;
+    }
+
+    .form-group {
+      margin-bottom: 24rem;
+      display: flex;
+
+      @include media('md') {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+
+      input,button {
+        height: 60rem;
+
+        @include media('md') {
+          height: 40rem;
+        }
+      }
+
+      .form-inp {
+        width: 322rem;
+        @include media('md') {
+          width: 100%;
+        }
+        &::after {
+          width: 320rem;
+
+          @include media('md') {
+            width: 99%;
+          }
+        }
+      }
+
+      button {
+        width: 320rem;
+        font-size: 22rem;
+
+        @include media('md') {
+          width: 100%;
+          font-size: 16rem;
+        }
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 36rem;
+      max-width: 714rem;
+
+      @include media('md') {
+        font-size: 24rem;
+      }
+    }
+
+    h4 {
+      font-family: $font-Inter;
+      max-width: 714rem;
+      font-weight: 300;
+      font-size: 24rem;
+      line-height: 32rem;
+      margin-bottom: 40rem;
+
+      @include media('md') {
+        font-size: 16rem;
+        line-height: 24rem;
+        margin-bottom: 24rem;
+      }
+    }
   }
 }
 // about

@@ -844,6 +844,189 @@ p, h1, h2, h3, h4, h5, h6 {
 .about .sec-title {
   margin-bottom: 80rem;
 }
+@media (max-width: 850px) {
+  .about .sec-title {
+    margin-bottom: 32rem;
+  }
+}
+.about_in {
+  display: flex;
+  gap: 67rem;
+}
+@media (max-width: 850px) {
+  .about_in {
+    flex-direction: column;
+    gap: 40rem;
+  }
+}
+.about_img {
+  display: flex;
+  flex-shrink: 0;
+  width: 424rem;
+  border-radius: 32rem;
+  border: 3rem solid #4060FF;
+  overflow: hidden;
+}
+@media (max-width: 850px) {
+  .about_img {
+    margin: auto;
+    border-radius: 16rem;
+  }
+}
+@media (max-width: 480px) {
+  .about_img {
+    width: 100%;
+  }
+}
+.about_img img {
+  transform: translateY(-5rem);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about_blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40rem 20rem;
+  margin-bottom: 36rem;
+}
+@media (max-width: 850px) {
+  .about_blocks {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24rem;
+  }
+}
+.about_block {
+  display: flex;
+  align-items: start;
+  gap: 24rem;
+}
+@media (max-width: 850px) {
+  .about_block {
+    gap: 16rem;
+  }
+}
+.about_block img {
+  width: 78rem;
+  height: 78rem;
+  display: flex;
+  flex-shrink: 0;
+}
+@media (max-width: 850px) {
+  .about_block img {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+.about_block h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 32rem;
+  color: #FFFFFF;
+  margin-bottom: 12rem;
+}
+@media (max-width: 850px) {
+  .about_block h3 {
+    font-size: 20rem;
+  }
+}
+.about_block p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 24rem;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .about_block p {
+    font-size: 16rem;
+  }
+}
+.about .contact-form {
+  border: 1px solid rgba(255, 255, 255, 0.2588235294);
+  background: #1D1C29;
+  backdrop-filter: blur(26.2000007629px);
+  border-radius: 32rem;
+  padding: 48rem 32rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form {
+    padding: 16rem;
+    border-radius: 16rem;
+  }
+}
+.about .contact-form .form-group {
+  margin-bottom: 24rem;
+  display: flex;
+}
+@media (max-width: 850px) {
+  .about .contact-form .form-group {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.about .contact-form .form-group input, .about .contact-form .form-group button {
+  height: 60rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form .form-group input, .about .contact-form .form-group button {
+    height: 40rem;
+  }
+}
+.about .contact-form .form-group .form-inp {
+  width: 322rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form .form-group .form-inp {
+    width: 100%;
+  }
+}
+.about .contact-form .form-group .form-inp::after {
+  width: 320rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form .form-group .form-inp::after {
+    width: 99%;
+  }
+}
+.about .contact-form .form-group button {
+  width: 320rem;
+  font-size: 22rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form .form-group button {
+    width: 100%;
+    font-size: 16rem;
+  }
+}
+.about .contact-form::after {
+  display: none;
+}
+.about .contact-form h3 {
+  font-weight: 500;
+  font-size: 36rem;
+  max-width: 714rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form h3 {
+    font-size: 24rem;
+  }
+}
+.about .contact-form h4 {
+  font-family: "Inter", sans-serif;
+  max-width: 714rem;
+  font-weight: 300;
+  font-size: 24rem;
+  line-height: 32rem;
+  margin-bottom: 40rem;
+}
+@media (max-width: 850px) {
+  .about .contact-form h4 {
+    font-size: 16rem;
+    line-height: 24rem;
+    margin-bottom: 24rem;
+  }
+}
 
 .structure {
   padding: 80rem 0;
@@ -1317,6 +1500,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .cards .card.center_card .card_btn {
+  z-index: 5;
   backdrop-filter: blur(66.3157424927px);
   background: linear-gradient(180deg, #188cff 0%, #4a25a9 100%);
 }
@@ -1558,7 +1742,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .footer_top {
     flex-direction: column;
     gap: 24rem;
-    margin-bottom: 0;
+    margin-bottom: 16rem;
   }
 }
 .footer .logo {
