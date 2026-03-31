@@ -838,6 +838,138 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 850px) {
+  .students {
+    padding-bottom: 700rem;
+    position: relative;
+  }
+}
+@media (max-width: 640px) {
+  .students {
+    padding-bottom: 550rem;
+  }
+}
+@media (max-width: 480px) {
+  .students {
+    padding-bottom: 400rem;
+  }
+}
+.students .container {
+  position: relative;
+}
+@media (max-width: 850px) {
+  .students .container {
+    position: static;
+  }
+}
+.students_img {
+  position: absolute;
+  top: -20rem;
+  right: -110rem;
+  width: 1100rem;
+  flex-shrink: 0;
+  z-index: -1;
+}
+@media (max-width: 850px) {
+  .students_img {
+    bottom: -200rem;
+    right: 0;
+    top: auto;
+    width: 844rem;
+    min-width: 844rem;
+  }
+}
+@media (max-width: 640px) {
+  .students_img {
+    bottom: -150rem;
+    width: 650rem;
+    min-width: 650rem;
+  }
+}
+@media (max-width: 480px) {
+  .students_img {
+    bottom: -130rem;
+    width: 500rem;
+    min-width: 500rem;
+  }
+}
+.students_in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50rem;
+  max-width: 928rem;
+  padding-bottom: 70rem;
+}
+@media (max-width: 850px) {
+  .students_in {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24rem;
+    padding-bottom: 16rem;
+  }
+}
+.students .sec-title {
+  max-width: 1070rem;
+}
+.students .description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24rem;
+  line-height: 175%;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 40rem 0 32rem 0;
+  max-width: 822rem;
+}
+@media (max-width: 850px) {
+  .students .description {
+    font-size: 16rem;
+    margin: 16rem 0;
+  }
+}
+.students_block {
+  padding: 24rem 20rem;
+  border-radius: 24rem;
+  border: 1.4rem solid rgba(255, 255, 255, 0.1490196078);
+  backdrop-filter: blur(42.0733909607px);
+  background: rgba(255, 255, 255, 0.1019607843);
+}
+@media (max-width: 850px) {
+  .students_block {
+    padding: 16rem;
+    border-radius: 12rem;
+  }
+}
+.students_block.two {
+  background: transparent;
+  border: none;
+}
+.students_block h3 {
+  font-weight: 500;
+  font-size: 44rem;
+  color: #FFFFFF;
+  margin-bottom: 20rem;
+}
+@media (max-width: 850px) {
+  .students_block h3 {
+    font-size: 24rem;
+    margin-bottom: 12rem;
+  }
+}
+.students_block p {
+  font-weight: 400;
+  font-size: 24rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 850px) {
+  .students_block p {
+    font-size: 16rem;
+  }
+}
+.students .line {
+  max-width: 922rem;
+  height: 4rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
 .about {
   padding: 50rem 0;
 }

@@ -1,0 +1,133 @@
+//students
+.students {
+
+  @include media('md') {
+    padding-bottom: 700rem;
+    position: relative;
+  }
+
+  @include media('sm') {
+    padding-bottom: 550rem;
+  }
+
+  @include media('xs') {
+    padding-bottom: 400rem;
+  }
+
+  .container {
+    position: relative;
+
+    @include media('md') {
+      position: static;
+    }
+  }
+
+  &_img {
+    position: absolute;
+    top: -20rem;
+    right: -110rem;
+    width: 1100rem;
+    flex-shrink: 0;
+    z-index: -1;
+
+    @include media('md') {
+      bottom: -200rem;
+      right: 0;
+      top: auto;
+      width: 844rem;
+      min-width: 844rem;
+    }
+
+    @include media('sm') {
+      bottom: -150rem;
+      width: 650rem;
+      min-width: 650rem;
+    }
+
+    @include media('xs') {
+      bottom: -130rem;
+      width: 500rem;
+      min-width: 500rem;
+    }
+  }
+
+  &_in {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50rem;
+    max-width: 928rem;
+    padding-bottom: 70rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 24rem;
+      padding-bottom: 16rem;
+    }
+  }
+
+  .sec-title {
+    max-width: 1070rem;
+  }
+
+  .description {
+    font-family: $font-Inter;
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 175%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 40rem 0 32rem 0;
+    max-width: 822rem;
+
+    @include media('md') {
+      font-size: 16rem;
+      margin: 16rem 0;
+    }
+  }
+
+  &_block {
+    padding: 24rem 20rem;
+    border-radius: 24rem;
+    border: 1.4rem solid #FFFFFF26;
+    backdrop-filter: blur(42.07339096069336px);
+    background: #FFFFFF1A;
+
+    @include media('md') {
+      padding: 16rem;
+      border-radius: 12rem;
+    }
+
+    &.two {
+      background: transparent;
+      border: none;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 44rem;
+      color: $color-white;
+      margin-bottom: 20rem;
+
+      @include media('md') {
+        font-size: 24rem;
+        margin-bottom: 12rem;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 24rem;
+      color: rgba(255, 255, 255, 0.6);
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  .line {
+    max-width: 922rem;
+    height: 4rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+//students
