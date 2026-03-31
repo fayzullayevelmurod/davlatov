@@ -445,7 +445,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 850px) {
   .section-top {
-    margin-top: 80rem;
+    margin-top: 60rem;
   }
 }
 
@@ -839,13 +839,6 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.treaning {
-  padding-top: 140rem;
-}
-.treaning h2 {
-  max-width: 1070rem;
-}
-
 .structure {
   padding: 80rem 0;
   background-image: url("../images/structure_bg.png");
@@ -1087,6 +1080,143 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.training .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40rem;
+}
+@media (max-width: 850px) {
+  .training .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24rem;
+  }
+}
+.training_imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rem;
+}
+@media (max-width: 480px) {
+  .training_imgs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16rem;
+  }
+}
+.training_img {
+  border-radius: 24rem;
+  overflow: hidden;
+  height: 485rem;
+  position: relative;
+}
+@media (max-width: 850px) {
+  .training_img {
+    border-radius: 16rem;
+    height: 370rem;
+  }
+}
+@media (max-width: 480px) {
+  .training_img {
+    height: 255rem;
+  }
+}
+.training_img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  border-radius: 24rem;
+  background: linear-gradient(138.86deg, #FFFFFF 0.53%, rgba(119, 119, 119, 0.2) 99.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+@media (max-width: 850px) {
+  .training_img::before {
+    border-radius: 16rem;
+  }
+}
+.training_img:last-child {
+  grid-column: span 2;
+  height: 255rem;
+}
+@media (max-width: 480px) {
+  .training_img:last-child {
+    grid-column: span 1;
+  }
+}
+.training_img:last-child img {
+  -o-object-position: top;
+     object-position: top;
+}
+.training_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 480px) {
+  .training_img img {
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+.training_text .sec-title {
+  text-transform: uppercase;
+  margin-bottom: 24rem;
+}
+.training_text p {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 32rem;
+  letter-spacing: -0.06em;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .training_text p {
+    font-size: 16rem;
+  }
+}
+.training_text h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 36rem;
+  letter-spacing: -0.06em;
+  color: #FFFFFF;
+  margin: 60rem 0 24rem 0;
+}
+@media (max-width: 850px) {
+  .training_text h3 {
+    font-size: 24rem;
+    margin: 24rem 0;
+  }
+}
+.training_text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  margin-bottom: 60rem;
+}
+@media (max-width: 850px) {
+  .training_text ul {
+    margin-bottom: 24rem;
+  }
+}
+.training_text ul li {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 24rem;
+  line-height: 150%;
+  letter-spacing: -0.06em;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .training_text ul li {
+    font-size: 16rem;
+    line-height: 120%;
+  }
+}
+
 .cards_head {
   display: flex;
   align-items: center;
@@ -1140,6 +1270,35 @@ p, h1, h2, h3, h4, h5, h6 {
   .cards .card {
     border-radius: 16rem;
   }
+}
+.cards .card.center_card {
+  position: relative;
+}
+.cards .card.center_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  z-index: 2;
+  border-radius: 24rem;
+  background: linear-gradient(90deg, #4A25A9 0%, #188CFF 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.cards .card.center_card .card_img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  z-index: 2;
+  border-radius: 24rem;
+  background: linear-gradient(90deg, #4A25A9 0%, #188CFF 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 .cards .card.center_card .card_btn {
   backdrop-filter: blur(66.3157424927px);

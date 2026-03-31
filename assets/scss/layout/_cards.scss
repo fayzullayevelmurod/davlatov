@@ -56,6 +56,42 @@
     }
 
     &.center_card {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 3px;
+        z-index: 2;
+        border-radius: 24rem;
+        background: linear-gradient(90deg, #4A25A9 0%, #188CFF 100%);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .card_img {
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          padding: 3px;
+          z-index: 2;
+          border-radius: 24rem;
+          background: linear-gradient(90deg, #4A25A9 0%, #188CFF 100%);
+          -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+        }
+      }
+
       .card_btn {
         backdrop-filter: blur(66.31574249267578px);
         background: linear-gradient(180deg, #188cff 0%, #4a25a9 100%);
