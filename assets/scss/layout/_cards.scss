@@ -1,0 +1,177 @@
+// cards
+.cards {
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80rem;
+
+    @include media('md') {
+      flex-direction: column;
+      align-items: start;
+      gap: 16rem;
+      margin-bottom: 24rem;
+    }
+
+    .sec-title {
+      max-width: 514rem;
+    }
+
+    p {
+      font-family: $font-Inter;
+      font-weight: 400;
+      font-size: 24rem;
+      line-height: 142%;
+      color: $color-white;
+      opacity: 0.9;
+      max-width: 680rem;
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  &_in {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 80rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 24rem;
+    }
+  }
+
+  .card {
+    border-radius: 24rem;
+    border: 1rem solid #FFFFFF26;
+    background: #1D1C29;
+    overflow: hidden;
+    position: relative;
+
+    @include media('md') {
+      border-radius: 16rem;
+    }
+
+    &.center_card {
+      .card_btn {
+        backdrop-filter: blur(66.31574249267578px);
+        background: linear-gradient(180deg, #188cff 0%, #4a25a9 100%);
+      }
+    }
+
+    &_img {
+      position: relative;
+      border-radius: 24rem;
+      overflow: hidden;
+      height: 235rem;
+
+      @include media('md') {
+        border-radius: 16rem;
+      }
+
+      @include media('xs') {
+        height: 180rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.36);
+      }
+    }
+
+    &_text {
+      padding: 24rem 20rem 0 20rem;
+      max-width: 420rem;
+
+      @include media('md') {
+        padding: 16rem;
+      }
+    }
+
+    h3 {
+      font-family: $font-Manrope;
+      font-weight: 500;
+      font-size: 28rem;
+      color: $color-white;
+      margin-bottom: 24rem;
+
+      @include media('md') {
+        font-size: 20rem;
+      }
+    }
+
+    ul {
+      padding-bottom: 120rem;
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+
+      @include media('md') {
+        padding-bottom: 60rem;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12rem;
+      }
+
+      span {
+        font-family: $font-Inter;
+        font-weight: 200;
+        font-size: 20rem;
+        color: $color-white;
+
+        @include media('md') {
+          font-size: 16rem;
+        }
+      }
+
+      img {
+        width: 26rem;
+        height: 26rem;
+        display: flex;
+        flex-shrink: 0;
+
+        @include media('md') {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+    }
+
+    &_btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 75rem;
+      width: 100%;
+      border-radius: 0;
+      font-weight: 600;
+      font-size: 26rem;
+      line-height: 128%;
+      text-transform: uppercase;
+
+      @include media('md') {
+        font-size: 16rem;
+        height: 50rem;
+      }
+    }
+  }
+
+}
+// cards

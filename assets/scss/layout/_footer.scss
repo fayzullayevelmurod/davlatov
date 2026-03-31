@@ -23,6 +23,10 @@
     color: $color-white;
 
     @include media('md') {
+      font-size: 42rem;
+    }
+
+    @include media('xs') {
       font-size: 32rem;
     }
   }
@@ -76,6 +80,7 @@
       justify-content: center;
       gap: 80rem;
       margin-bottom: 32rem;
+      text-align: center;
 
       @include media('md') {
         flex-direction: column;
